@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int q = sc.nextInt();
+        while(q>0)
+        {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int n = sc.nextInt();
+            int prev=a + (int)Math.pow(2,0)*b;
+            System.out.print(prev+" ");
+            for(int i=1;i<n;++i)
+            {
+                prev=prev + (int)Math.pow(2,i)*b;
+                System.out.print(prev+" ");
+            }
+            System.out.println();
+            q--;
+        }        
+    }
+}
